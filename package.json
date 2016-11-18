@@ -1,0 +1,20 @@
+{
+  "name": "nativebase-snippets-atom",
+  "version": "1.0.0",
+  "description": "NativeBase Snippets for Atom and Nuclide",
+  "keywords": [
+    "react-native",
+    "native-base",
+    "nuclide",
+    "snippets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeekyAnts/native-base-atom-package"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "dependencies": {}
+}
