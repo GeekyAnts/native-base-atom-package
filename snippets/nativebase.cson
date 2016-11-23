@@ -23,8 +23,12 @@
 '.js':
   'Anatomy':
     'prefix': 'anatomy'
-    'body': '<Container>\n\t<Header>\n\t\t<Button>\n\t\t\t<Icon />\n\t\t</Button>\n\t\t<Title>$1</Title>\n\t\t
-    <Button>\n\t\t\t<Icon />\n\t\t</Button>\n\t</Header>\n\t<Content>\n\t</Content>\n</Container>'
+    'body': '<Container>\n\t<Header>\n\t\t<Button>\n\t\t\t<Icon name="$1"/>\n\t\t</Button>\n\t\t<Title>$2</Title>\n\t\t
+    <Button>\n\t\t\t<Icon name="$3" />\n\t\t</Button>\n\t</Header>\n\n\t<Content>\n\t</Content>
+    \n\n\t<Footer>\n\t<FooterTab>\n\t\t<Button>\n\t\t\t$4\n\t\t\t<Icon name="$5" />\n\t\t</Button>
+    \n\t\t<Button>\n\t\t\t$6\n\t\t\t<Icon name="$7" />\n\t\t</Button>
+    \n\t\t<Button>\n\t\t\t$8\n\t\t\t<Icon name="$9" />\n\t\t</Button>
+    \n\t\t<Button>\n\t\t\t$10\n\t\t\t<Icon name="$11" />\n\t\t</Button>\n\t</FooterTab>\n</Footer>\n</Container>'
 
   'Container':
     'prefix': 'container'
