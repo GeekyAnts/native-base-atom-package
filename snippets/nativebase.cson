@@ -22,25 +22,189 @@
 
 '.js':
   'Anatomy':
-    'prefix': 'ana'
-    'body': '<Container>\n\t<Header>\n\t\t<Button>\n\t\t\t<Icon />\n\t\t</Button>\n\t\t<Title>$1</Title>\n\t\t<Button>\n\t\t\t<Icon />\n\t\t</Button>\n\t</Header>\n\t<Content>\n\t</Content>\n</Container>'
+    'prefix': 'anatomy'
+    'body': '<Container>\n\t<Header>\n\t\t<Button>\n\t\t\t<Icon />\n\t\t</Button>\n\t\t<Title>$1</Title>\n\t\t
+    <Button>\n\t\t\t<Icon />\n\t\t</Button>\n\t</Header>\n\t<Content>\n\t</Content>\n</Container>'
 
   'Container':
-    'prefix': 'conta'
+    'prefix': 'container'
     'body': '<Container>\n\t$1\n</Container>'
 
   'Header':
-    'prefix': 'head'
-    'body': '<Header>\n\t<Button>\n\t\t<Icon />\n\t</Button>\n\t<Title>$1</Title>\n\t<Button>\n\t\t<Icon />\n\t</Button>\n</Header>'
+    'prefix': 'header'
+    'body': '<Header>\n\t<Button>\n\t\t<Icon />\n\t</Button>\n\t<Title>$1</Title>\n\t
+    <Button>\n\t\t<Icon />\n\t</Button>\n</Header>'
 
   'Content':
-    'prefix': 'conte'
+    'prefix': 'content'
     'body': '<Content>\n\t$1\n</Content>'
+
+  'Badge':
+    'prefix': 'badge'
+    'body': '<Badge>$1</Badge>'
 
   'Button':
     'prefix': 'btn'
     'body': '<Button>\n\t$1\n</Button>'
 
+  'Card':
+    'prefix': 'card'
+    'body': '<Card>\n\t<CardItem>\n\t\t<Text>\n\t\t\t$1\n\t\t</Text>\n\t</CardItem>\n</Card>'
+
+  'CardItem':
+    'prefix': 'cardItem'
+    'body': '<CardItem>\n\t<Text>\n\t\t$1\n\t</Text>\n</CardItem>'
+
+  'CardImage':
+    'prefix': 'cardImage'
+    'body': '<Card>\n\t<CardItem>\n\t\t<Thumbnail source={$1} />\n\t\t<Text></Text>\n\t\t<Text note></Text>
+    \n\t</CardItem>\n\t<CardItem>\n\t\t<Image source={} />\n\t</CardItem>\n\t<CardItem>\n\t\t<Button transparent>
+    \n\t\t\t\n\t\t</Button>\n\t</CardItem>\n</Card>'
+
+  'CardShowcase':
+    'prefix': 'cardShowcase'
+    'body': '<Card>\n\t<CardItem>\n\t\t<Thumbnail source={$1} />\n\t\t<Text></Text>\n\t\t<Text note></Text>
+    \n\t</CardItem>\n\t<CardItem cardBody>\n\t\t<Image source={} />\n\t\t<Text>\n\t\t\t\n\t\t</Text>
+    \n\t\t<Button transparent>\n\t\t\t\n\t\t</Button>\n\t</CardItem>\n</Card>'
+
+  'CardDynamic':
+    'prefix': 'cardDynamic'
+    'body': '<Card dataArray={$1} renderRow={($2) =>\n\t<CardItem>\n\t\t$3\n\t</CardItem>\n}>\n</Card>'
+
+  'Checkbox':
+    'prefix': 'checkbox'
+    'body': '<CheckBox checked={false$1} />'
+
+  'DeckSwiper':
+    'prefix': 'deckSwiper'
+    'body': '<DeckSwiper dataSource={$1} renderItem={$2 =>
+      \n\t<Card>\n\t\t<CardItem>\n\t\t\t<Thumbnail source={$3}>\n\t\t\t<Text></Text>\n\t\t\t<Text note><Text>
+      \n\t\t</CardItem>\n\t\t<CardItem>\n\t\t\t<Image source={$4} />\n\t\t</CardItem>
+      \n\t\t<CardItem>\n\t\t\t<Icon name="$5" />\n\t\t\t<Text></Text>\n\t\t</CardItem>\n\t</Card>\n/>'
+
+  'FAB':
+    'prefix': 'fab'
+    'body': '<Fab\n\tactive={$1}\n\tdirection="up"\n\tcontainerStyle={{$2}}\n\tposition="bottomRight"
+    \n\tonPress={() => $3}\n>\n\t<Icon name="$4" />
+    \n\t<Button>\n\t\t<Icon name="$5" />\n\t</Button>
+    \n\t<Button>\n\t\t<Icon name="$6" />\n\t</Button>
+    \n\t<Button>\n\t\t<Icon name="$7" />\n\t</Button>\n</Fab>'
+
+  'FooterTab':
+    'prefix': 'footerTab'
+    'body': '<Footer>\n\t<FooterTab>\n\t\t<Button>\n\t\t\t$1\n\t\t\t<Icon name="$2" />\n\t\t</Button>
+    \n\t\t<Button>\n\t\t\t$3\n\t\t\t<Icon name="$4" />\n\t\t</Button>
+    \n\t\t<Button>\n\t\t\t$5\n\t\t\t<Icon name="$6" />\n\t\t</Button>
+    \n\t\t<Button>\n\t\t\t$7\n\t\t\t<Icon name="$8" />\n\t\t</Button>\n\t</FooterTab>\n</Footer>'
+
+  'Grid':
+    'prefix': 'grid'
+    'body': '<Grid>\n\t<Col $1/>\n\t<Row $2/>\n</Grid>'
+
+  'Col':
+    'prefix': 'col'
+    'body': '<Col $1/>'
+
+  'Row':
+    'prefix': 'row'
+    'body': '<Row $1/>'
+
+  'H1':
+    'prefix': 'h1'
+    'body': '<H1>$1</H1>'
+
+  'H2':
+    'prefix': 'h2'
+    'body': '<H2>$1</H2>'
+
+  'H3':
+    'prefix': 'h3'
+    'body': '<H3>$1</H3>'
+
   'Icon':
-    'prefix': 'ic'
-    'body': '<Icon $1/>'
+    'prefix': 'icon'
+    'body': '<Icon name="$1"/>'
+
+  'Image':
+    'prefix': 'image'
+    'body': '<Image source={$1} />'
+
+  'List':
+    'prefix': 'list'
+    'body': '<List>\n\t<ListItem>\n\t\t<Text>$1</Text>\n\t</ListItem>\n</List>'
+
+  'ListItem':
+    'prefix': 'listItem'
+    'body': '<ListItem>\n\t<Text>$1</Text>\n</ListItem>'
+
+  'ListIcon':
+    'prefix': 'listIcon'
+    'body': '<List>\n\t<ListItem iconLeft>\n\t\t<Icon name="$1" />\n\t\t<Text>$2</Text>
+    \n\t\t<Text note>$3</Text>\n\t</ListItem>\n</List>'
+
+  'ListAvatar':
+    'prefix': 'listAvatar'
+    'body': '<List>\n\t<ListItem>\n\t\t<Thumbnail source={$1} />\n\t\t<Text>$2</Text>\n\t\t<Text note>$3</Text>
+    \n\t</ListItem>\n</List>'
+
+  'ListThumbnail':
+    'prefix': 'listThumbnail'
+    'body': '<List>\n\t<ListItem>\n\t\t<Thumbnail square size={80} source={$1} />\n\t\t<Text>$2</Text>\n\t\t<Text note>$3</Text>
+    \n\t</ListItem>\n</List>'
+
+  'ListDynamic':
+    'prefix': 'listDynamic'
+    'body': '<List dataArray={$1} renderRow={($2) =>
+      \n\t<ListItem>\n\t\t<Text>$3</Text>\n\t</ListItem>\n}>\n</List>'
+
+  'Picker':
+    'prefix': 'picker'
+    'body': '<Picker\n\tiosHeader="Select one$1"\n\tmode="dropdown$2"\n\tselectedValue={$3}\n\tonValueChange={$4}>
+    \n\t<Item label="$5" value="$6" />
+    \n\t<Item label="$7" value="$8" />\n</Picker>'
+
+  'Radio':
+    'prefix': 'radio'
+    'body': '<Radio selected={false$1} />'
+
+  'Searchbar':
+    'prefix': 'searchbar'
+    'body': '<Header searchBar rounded>\n\t<InputGroup>\n\t\t<Icon name="$1" />
+    \n\t\t<Input placeholder="Search$2" />\n\t\t<Icon name="ios-people$3">\n\t</InputGroup>
+    \n\t<Button transparent>\n\t\tSearch$4\n\t</Button>\n</Header>'
+
+  'Spinner':
+    'prefix': 'spinner'
+    'body': '<Spinner color="$1" />'
+
+  'Tabs':
+    'prefix': 'tabs'
+    'body': '<Tabs>\n\t<TabOne tabLabel="One$1" />\n\t<TabTwo tabLabel="Two$2" />\n</Tabs>'
+
+  'Text':
+    'prefix': 'text'
+    'body': '<Text>$1</Text>'
+
+  'Textbox':
+    'prefix': 'textbox'
+    'body': '<InputGroup>\n\t<Input />\n</InputGroup>'
+
+  'Regular Textbox':
+    'prefix': 'regularTextbox'
+    'body': '<InputGroup borderType="regular">\n\t<Input placeholder="Type your text here$1"/>\n</InputGroup>'
+
+  'Underlined Textbox':
+    'prefix': 'underlinedTextbox'
+    'body': '<InputGroup borderType="underline">\n\t<Input placeholder="Type your text here$1"/>\n</InputGroup>'
+
+  'Rounded Textbox':
+    'prefix': 'roundedTextbox'
+    'body': '<InputGroup borderType="rounded">\n\t<Input placeholder="Type your text here$1"/>\n</InputGroup>'
+
+  'Icon Textbox':
+    'prefix': 'iconTextbox'
+    'body': '<InputGroup>\n\t<Icon name="$1" />\n\t<Input placeholder="Type your text here$2"/>\n</InputGroup>'
+
+  'Thumbnail':
+    'prefix': 'thumbnail'
+    'body': '<Thumbnail source={$1} />'
