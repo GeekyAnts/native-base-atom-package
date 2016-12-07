@@ -82,7 +82,7 @@
   'DeckSwiper':
     'prefix': 'deckSwiper'
     'body': '<DeckSwiper dataSource={$1} renderItem={$2 =>
-      \n\t<Card>\n\t\t<CardItem>\n\t\t\t<Thumbnail source={$3}>\n\t\t\t<Text></Text>\n\t\t\t<Text note><Text>
+      \n\t<Card>\n\t\t<CardItem>\n\t\t\t<Thumbnail source={$3} />\n\t\t\t<Text></Text>\n\t\t\t<Text note></Text>
       \n\t\t</CardItem>\n\t\t<CardItem>\n\t\t\t<Image source={$4} />\n\t\t</CardItem>
       \n\t\t<CardItem>\n\t\t\t<Icon name="$5" />\n\t\t\t<Text></Text>\n\t\t</CardItem>\n\t</Card>\n/>'
 
@@ -174,7 +174,7 @@
   'Searchbar':
     'prefix': 'searchbar'
     'body': '<Header searchBar rounded>\n\t<InputGroup>\n\t\t<Icon name="$1" />
-    \n\t\t<Input placeholder="Search$2" />\n\t\t<Icon name="ios-people$3">\n\t</InputGroup>
+    \n\t\t<Input placeholder="Search$2" />\n\t\t<Icon name="ios-people$3" />\n\t</InputGroup>
     \n\t<Button transparent>\n\t\tSearch$4\n\t</Button>\n</Header>'
 
   'Spinner':
